@@ -24,7 +24,8 @@ const Login = () => {
     e.preventDefault()
   
     try {
-      const response = await axios.post('http://localhost:5000/login', {
+      // const response = await axios.post('http://localhost:5000/login', {
+      const response = await axios.post('https://rcms-cakeshop-api.onrender.com/login', {
         username: loginUsername,
         password: loginPassword
       })
@@ -50,7 +51,8 @@ const Login = () => {
     e.preventDefault()
 
     try {
-      const response = await axios.post('http://localhost:5000/register', {
+      // const response = await axios.post('http://localhost:5000/register', {
+      const response = await axios.post('https://rcms-cakeshop-api.onrender.com/register', {
         name,
         gender,
         phonenumber,

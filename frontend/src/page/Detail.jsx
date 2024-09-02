@@ -51,7 +51,8 @@ const Details = () => {
             decodedToken = jwtDecode(token)
         }
 
-        const response = await axios.post('http://localhost:5000/cart', {
+        // const response = await axios.post('http://localhost:5000/cart', {
+        const response = await axios.post('https://rcms-cakeshop-api.onrender.com/cart', {
           id: decodedToken.id,
           name: info.product_name,
           price: info.price,
@@ -82,7 +83,8 @@ const Details = () => {
           decodedToken = jwtDecode(token);
         }
 
-        const response = await axios.post('http://localhost:5000/cart', {
+        // const response = await axios.post('http://localhost:5000/cart', {
+        const response = await axios.post('https://rcms-cakeshop-api.onrender.com/cart', {
           id: decodedToken.id,
           name: info.product_name,
           price: info.price,

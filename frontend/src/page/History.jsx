@@ -30,7 +30,8 @@ const History = () => {
         }
           const fetchData = async () => {
             try {
-              const response = await fetch('http://localhost:5000/order')
+              // const response = await fetch('http://localhost:5000/order')
+              const response = await fetch('https://rcms-cakeshop-api.onrender.com/order')
               if (response.status === 200) {
                 const data = await response.json()
                 const userOrders = data.orders.filter(order => order.user_id === userId)

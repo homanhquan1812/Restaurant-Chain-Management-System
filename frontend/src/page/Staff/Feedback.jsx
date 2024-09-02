@@ -9,7 +9,8 @@ const Feedback = () => {
     useEffect(() => {
         const fetchFeedbacksData = async () => {
           try {
-            const response = await fetch('http://localhost:5000/feedback')
+            // const response = await fetch('http://localhost:5000/feedback')
+            const response = await fetch('https://rcms-cakeshop-api.onrender.com/feedback')
             const data = await response.json()
             setFeedbacks(data.feedback)
           } catch (error) {

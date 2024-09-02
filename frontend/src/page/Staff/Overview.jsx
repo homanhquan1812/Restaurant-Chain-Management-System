@@ -10,7 +10,8 @@ const Overview = () => {
     useEffect(() => {
         const fetchNotesData = async () => {
           try {
-            const response = await fetch('http://localhost:5000/note');
+            // const response = await fetch('http://localhost:5000/note');
+            const response = await fetch('https://rcms-cakeshop-api.onrender.com/note');
             const data = await response.json();
             setNotes(data.note);
           } catch (error) {
@@ -22,7 +23,8 @@ const Overview = () => {
 
         const fetchOrdersData = async () => {
             try {
-              const response = await fetch('http://localhost:5000/order');
+              // const response = await fetch('http://localhost:5000/order');
+              const response = await fetch('https://rcms-cakeshop-api.onrender.com/order');
               const data = await response.json();
               setOrders(data.orders);
             } catch (error) {

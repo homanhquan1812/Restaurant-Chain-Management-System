@@ -9,7 +9,8 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchOrdersData = async () => {
           try {
-            const response = await fetch('http://localhost:5000/order')
+            // const response = await fetch('http://localhost:5000/order')
+            const response = await fetch('https://rcms-cakeshop-api.onrender.com/order')
             const data = await response.json()
             setOrders(data.orders)
           } catch (error) {
