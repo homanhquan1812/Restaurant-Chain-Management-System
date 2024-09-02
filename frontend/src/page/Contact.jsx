@@ -17,7 +17,8 @@ const Contact = () => {
     const submit = async (e) => {
         e.preventDefault();
         try {
-          const response = await axios.post('http://localhost:5000/feedback', {
+          // const response = await axios.post('http://localhost:5000/feedback', {
+          const response = await axios.post('https://rcms-cakeshop-api.onrender.com/feedback', {
             first_name: firstName,
             last_name: lastName,
             phone,

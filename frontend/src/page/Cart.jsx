@@ -24,7 +24,8 @@ const Cart = () => {
     const navigateTo = useNavigate()
 
     const deleteProduct = async (id) => {
-      const response = await axios.delete(`http://localhost:5000/cart/${userId}/${id}`)
+      // const response = await axios.delete(`http://localhost:5000/cart/${userId}/${id}`)
+      const response = await axios.delete(`https://rcms-cakeshop-api.onrender.com/cart/${userId}/${id}`)
   
       if (response.status == 200) {
         console.log("Course deleted from user's cart successfully!")
@@ -33,7 +34,8 @@ const Cart = () => {
 
     const orderProducts = async (id) => {
       try {
-        const response = await axios.post('http://localhost:5000/order', {
+        // const response = await axios.post('http://localhost:5000/order', {
+        const response = await axios.post('https://rcms-cakeshop-api.onrender.com/order', {
           name, email, phonenumber, address, cart, user_id: id, delivered: false, declined: false
         })
   
@@ -80,7 +82,8 @@ const Cart = () => {
     
         const getCourse = async () => {
           try {
-            const response = await fetch(`http://localhost:5000/cart/${userId}`, {
+            // const response = await fetch(`http://localhost:5000/cart/${userId}`, {
+            const response = await fetch(`https://rcms-cakeshop-api.onrender.com/cart/${userId}`, {
               withCredentials: true // Ensure cookies are sent
             })
             

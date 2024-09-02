@@ -14,8 +14,8 @@ const Customer = () => {
     }
     const handleDeleteCustomers = async () => {
         try {
-            console.log(customerID)
-            await axios.delete(`http://localhost:5000/customer/${customerID}`)
+            // await axios.delete(`http://localhost:5000/customer/${customerID}`)
+            await axios.delete(`https://rcms-cakeshop-api.onrender.com/customer/${customerID}`)
         } catch (error) {
             console.error('Error deleting course:', error)
         }
@@ -24,7 +24,8 @@ const Customer = () => {
     useEffect(() => {
         const fetchCustomersData = async () => {
           try {
-            const response = await fetch('http://localhost:5000/customer')
+            // const response = await fetch('http://localhost:5000/customer')
+            const response = await fetch('https://rcms-cakeshop-api.onrender.com/customer')
             const data = await response.json()
             setCustomers(data.customer)
           } catch (error) {

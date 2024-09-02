@@ -43,7 +43,8 @@ const ChangeInfo = ({}) => {
       const token = localStorage.getItem('token')
       
       try {
-        const response = await axios.put(`http://localhost:5000/staff/info/${import.meta.env.VITE_APP_API_KEY}`, {
+        // const response = await axios.put(`http://localhost:5000/staff/info/${import.meta.env.VITE_APP_API_KEY}`, {
+        const response = await axios.put(`https://rcms-cakeshop-api.onrender.com/staff/info/${import.meta.env.VITE_APP_API_KEY}`, {
           name, phonenumber, email, address
         }, { 
           headers: { 
@@ -68,7 +69,8 @@ const ChangeInfo = ({}) => {
         }
         
         if (newPassword != '') {
-          await axios.put(`http://localhost:5000/staff/password/${import.meta.env.VITE_APP_API_KEY}`, {
+          // await axios.put(`http://localhost:5000/staff/password/${import.meta.env.VITE_APP_API_KEY}`, {
+          await axios.put(`https://rcms-cakeshop-api.onrender.com/staff/password/${import.meta.env.VITE_APP_API_KEY}`, {
             oldPassword,
             newPassword
           }, { 
