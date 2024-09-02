@@ -129,7 +129,10 @@ const ChangeInfo = ({}) => {
     checkLoginStatus()
     checkToken()
 
-        const intervalId = setInterval(fetchOrdersData, 5000)
+        const intervalId = setInterval(() => {
+          checkLoginStatus()
+          checkToken()
+        }, 5000)
 
         return () => clearInterval(intervalId)
       }, [id])

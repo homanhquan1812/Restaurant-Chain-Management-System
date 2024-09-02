@@ -106,7 +106,8 @@ const Details = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/product/${id}`)
+        // const response = await fetch(`http://localhost:5000/product/${id}`)
+        const response = await fetch(`https://rcms-cakeshop-api.onrender.com/product/${id}`)
         const data = await response.json()
         setInfo(data.product)
       } catch (error) {
@@ -116,7 +117,8 @@ const Details = () => {
 
     const fetchData2 = async () => {
       try {
-        const response = await fetch('http://localhost:5000/product')
+        // const response = await fetch('http://localhost:5000/product')
+        const response = await fetch('https://rcms-cakeshop-api.onrender.com/product')
         const data = await response.json()
         setProducts(data.product)
       } catch (error) {
@@ -214,7 +216,7 @@ const Details = () => {
                       <div style={{position: 'absolute', bottom: '65px', left: 0, right: 0, textAlign: 'center'}}>
                         <p className="card-text"><b>{product.price} VND</b></p>
                       </div>
-                      <a href={`/details/${product.id}`} className="btn btn-primary" style={{position: 'absolute', bottom: '20px', left: '10px', right: '10px'}}>More Details</a>
+                      <a href={`/detail/${product.id}`} className="btn btn-primary" style={{position: 'absolute', bottom: '20px', left: '10px', right: '10px'}}>More Details</a>
                     </div>  
                   </div>
                 </div>
