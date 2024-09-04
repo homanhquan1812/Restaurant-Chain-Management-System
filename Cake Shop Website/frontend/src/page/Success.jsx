@@ -26,7 +26,7 @@ const Success = () => {
           <h3>Please keep in touch!</h3>
       </div>
       <div className="success_button">
-          <button className="button-pink "><a href="/gallery">Continue Buying</a></button>
+          <button className="button-pink "><a href="/menu">Continue Buying</a></button>
           <button className="button-pink "><a href="/home">Go back to Homepage</a></button>
       </div>
       <Footer></Footer>

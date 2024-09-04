@@ -142,7 +142,7 @@ const ChangeInfo = ({}) => {
     <Head additionalStylesheets={[
             "/css/dashboard.css"
         ]} additionalTitle={[
-            "Change staff - Gà Nấm Cake Shop"
+            "Change Info - Gà Nấm Cake Shop"
         ]}/>
     {/* Header */}
     <Header2></Header2>
@@ -153,7 +153,7 @@ const ChangeInfo = ({}) => {
         <div className="mt-4">
           <div className="insights">
             <div className="sales">
-              <h1>Change your staffrmation here:</h1>
+              <h1>Change your information here:</h1>
               <div className="form-group">
                 <label htmlFor="name">Your ID</label>
                 <input type="type" className="form-control" value={id} id="_id" name="_id" disabled />
