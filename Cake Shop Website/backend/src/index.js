@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 3000
+const port =  3000
 const morgan = require('morgan')
 const session = require('express-session')
 const pgSession = require('connect-pg-simple')(session)
@@ -16,8 +16,8 @@ db.connect()
 
 // CORS
 app.use(cors({ 
-    // origin: 'http://localhost:5173',
-    origin: 'https://rcms-cakeshop.onrender.com',
+    origin: 'http://localhost:5173',
+    // origin: 'https://rcms-cakeshop.onrender.com',
     credentials: true
 }))
 
