@@ -24,7 +24,7 @@ const Cart = () => {
     const navigateTo = useNavigate()
 
     const deleteProduct = async (id) => {
-      const response = await axios.delete(`${VITE_APP_WEB_SERVICE}/cart/${userId}/${id}`)
+      const response = await axios.delete(`${import.meta.env.VITE_APP_WEB_SERVICE}/cart/${userId}/${id}`)
   
       if (response.status == 200) {
         console.log("Course deleted from user's cart successfully!")
@@ -33,7 +33,7 @@ const Cart = () => {
 
     const orderProducts = async (id) => {
       try {
-        const response = await axios.post(`${VITE_APP_WEB_SERVICE}/order`, {
+        const response = await axios.post(`${import.meta.env.VITE_APP_WEB_SERVICE}/order`, {
           name, email, phonenumber, address, cart, user_id: id, delivered: false, declined: false
         })
   
@@ -80,7 +80,7 @@ const Cart = () => {
     
         const getCourse = async () => {
           try {
-            const response = await fetch(`${VITE_APP_WEB_SERVICE}/cart/${userId}`, {
+            const response = await fetch(`${import.meta.env.VITE_APP_WEB_SERVICE}/cart/${userId}`, {
               withCredentials: true // Ensure cookies are sent
             })
             

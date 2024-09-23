@@ -9,7 +9,7 @@ const Dashboard = () => {
     useEffect(() => {
         const fetchOrdersData = async () => {
           try {
-            const response = await fetch(`${VITE_APP_WEB_SERVICE}/order`)
+            const response = await fetch(`${import.meta.env.VITE_APP_WEB_SERVICE}/order`)
             const data = await response.json()
             setOrders(data.orders)
           } catch (error) {

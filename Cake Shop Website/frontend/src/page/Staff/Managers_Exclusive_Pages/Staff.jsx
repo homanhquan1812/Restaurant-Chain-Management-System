@@ -33,7 +33,7 @@ const Customer = () => {
                 position: staffToUpdate.position !== undefined ? staffToUpdate.position : currentStaff.position,
             }
 
-            await axios.put(`${import.meta.env.VITE_APP_WEB_SERVICE}/staff/rap/${import.meta.env.VITE_APP_API_KEY}/${staffID}`, updatedData)
+            await axios.put(`${import.meta.env.L}/staff/rap/${import.meta.env.VITE_APP_API_KEY}/${staffID}`, updatedData)
             alert('Staff updated successfully.')
             fetchStaffsData()
         } catch (error) {

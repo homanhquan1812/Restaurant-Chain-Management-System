@@ -16,14 +16,14 @@ const Order = () => {
     }
     const handleDeleteOrders_M = async () => {
         try {
-            await axios.put(`${VITE_APP_WEB_SERVICE}/order/manager/${ordersID}`)
+            await axios.put(`${import.meta.env.VITE_APP_WEB_SERVICE}/order/manager/${ordersID}`)
         } catch (error) {
             console.error('Error deleting course:', error) 
         }
     }
     const handleDeleteOrders_E = async () => {
         try {
-            await axios.put(`${VITE_APP_WEB_SERVICE}/order/employee/${ordersID}`)
+            await axios.put(`${import.meta.env.VITE_APP_WEB_SERVICE}/order/employee/${ordersID}`)
         } catch (error) {
             console.error('Error deleting course:', error) 
         }
@@ -32,7 +32,7 @@ const Order = () => {
     useEffect(() => {
         const fetchOrdersData = async () => {
           try {
-            const response = await fetch(`${VITE_APP_WEB_SERVICE}/order`)
+            const response = await fetch(`${import.meta.env.VITE_APP_WEB_SERVICE}/order`)
             const data = await response.json()
             setOrders(data.orders)
           } catch (error) {

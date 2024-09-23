@@ -17,7 +17,7 @@ const Contact = () => {
     const submit = async (e) => {
         e.preventDefault();
         try {
-          const response = await axios.post(`${VITE_APP_WEB_SERVICE}/feedback`, {
+          const response = await axios.post(`${import.meta.env.VITE_APP_WEB_SERVICE}/feedback`, {
             first_name: firstName,
             last_name: lastName,
             phone,

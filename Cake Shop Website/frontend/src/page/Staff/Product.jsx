@@ -19,7 +19,7 @@ const Product = () => {
     };
     const handleDeleteProducts = async () => {
         try {
-            await axios.delete(`${VITE_APP_WEB_SERVICE}/product/${productID}`);
+            await axios.delete(`${import.meta.env.VITE_APP_WEB_SERVICE}/product/${productID}`);
         } catch (error) {
             console.error('Error deleting course:', error)
         }
@@ -28,7 +28,7 @@ const Product = () => {
     const submit = async (e) => {
         e.preventDefault()
         try {
-          await axios.post(`${VITE_APP_WEB_SERVICE}/product`, {
+          await axios.post(`${import.meta.env.VITE_APP_WEB_SERVICE}/product`, {
             product_name: csw_products,
             type,
             description,
@@ -43,7 +43,7 @@ const Product = () => {
     useEffect(() => {
         const fetchProductsData = async () => {
           try {
-            const response = await fetch(`${VITE_APP_WEB_SERVICE}/product`)
+            const response = await fetch(`${import.meta.env.VITE_APP_WEB_SERVICE}/product`)
             const data = await response.json()
             setProducts(data.product)
           } catch (error) {
