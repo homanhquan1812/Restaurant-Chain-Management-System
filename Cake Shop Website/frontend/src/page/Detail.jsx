@@ -51,8 +51,7 @@ const Details = () => {
             decodedToken = jwtDecode(token)
         }
 
-        // const response = await axios.post('http://localhost:5000/cart', {
-        const response = await axios.post('https://rcms-cakeshop-api.onrender.com/cart', {
+        const response = await axios.post(`${VITE_APP_WEB_SERVICE}/cart`, {
           id: decodedToken.id,
           name: info.product_name,
           price: info.price,
@@ -83,8 +82,7 @@ const Details = () => {
           decodedToken = jwtDecode(token);
         }
 
-        // const response = await axios.post('http://localhost:5000/cart', {
-        const response = await axios.post('https://rcms-cakeshop-api.onrender.com/cart', {
+        const response = await axios.post(`${VITE_APP_WEB_SERVICE}/cart`, {
           id: decodedToken.id,
           name: info.product_name,
           price: info.price,
@@ -106,8 +104,7 @@ const Details = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        // const response = await fetch(`http://localhost:5000/product/${id}`)
-        const response = await fetch(`https://rcms-cakeshop-api.onrender.com/product/${id}`)
+        const response = await fetch(`${VITE_APP_WEB_SERVICE}/product/${id}`)
         const data = await response.json()
         setInfo(data.product)
       } catch (error) {
@@ -117,8 +114,7 @@ const Details = () => {
 
     const fetchData2 = async () => {
       try {
-        // const response = await fetch('http://localhost:5000/product')
-        const response = await fetch('https://rcms-cakeshop-api.onrender.com/product')
+        const response = await fetch(`${VITE_APP_WEB_SERVICE}/product`)
         const data = await response.json()
         setProducts(data.product)
       } catch (error) {

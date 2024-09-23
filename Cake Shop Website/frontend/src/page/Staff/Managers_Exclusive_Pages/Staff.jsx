@@ -33,8 +33,7 @@ const Customer = () => {
                 position: staffToUpdate.position !== undefined ? staffToUpdate.position : currentStaff.position,
             }
 
-            // await axios.put(`http://localhost:5000/staff/rap/${import.meta.env.VITE_APP_API_KEY}/${staffID}`, updatedData)
-            await axios.put(`https://rcms-cakeshop-api.onrender.com/staff/rap/${import.meta.env.VITE_APP_API_KEY}/${staffID}`, updatedData)
+            await axios.put(`${import.meta.env.VITE_APP_WEB_SERVICE}/staff/rap/${import.meta.env.VITE_APP_API_KEY}/${staffID}`, updatedData)
             alert('Staff updated successfully.')
             fetchStaffsData()
         } catch (error) {
@@ -53,8 +52,7 @@ const Customer = () => {
 
     const handleDeleteStaffs = async () => {
         try {
-            // await axios.delete(`http://localhost:5000/staff/${import.meta.env.VITE_APP_API_KEY}/${staffID}`)
-            await axios.delete(`https://rcms-cakeshop-api.onrender.com/staff/${import.meta.env.VITE_APP_API_KEY}/${staffID}`)
+            await axios.delete(`${import.meta.env.VITE_APP_WEB_SERVICE}/staff/${import.meta.env.VITE_APP_API_KEY}/${staffID}`)
             alert('Staff deleted successfully.')
             fetchStaffsData()
         } catch (error) {
@@ -65,8 +63,7 @@ const Customer = () => {
 
     const fetchStaffsData = async () => {
         try {
-            // const response = await fetch(`http://localhost:5000/staff/${import.meta.env.VITE_APP_API_KEY}`)
-            const response = await fetch(`https://rcms-cakeshop-api.onrender.com/staff/${import.meta.env.VITE_APP_API_KEY}`)
+            const response = await fetch(`${import.meta.env.VITE_APP_WEB_SERVICE}/staff/${import.meta.env.VITE_APP_API_KEY}`)
             const data = await response.json()
             setStaffs(data.staff)
         } catch (error) {

@@ -16,7 +16,7 @@ db.connect()
 
 // CORS
 app.use(cors({ 
-    origin: 'https://rcms-cakeshop.onrender.com',
+    origin: `${process.env.STATIC_SITE}`,
     credentials: true
 }))
 

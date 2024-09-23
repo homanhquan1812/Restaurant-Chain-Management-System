@@ -19,8 +19,7 @@ const Product = () => {
     };
     const handleDeleteProducts = async () => {
         try {
-            // await axios.delete(`http://localhost:5000/product/${productID}`);
-            await axios.delete(`https://rcms-cakeshop-api.onrender.com/product/${productID}`);
+            await axios.delete(`${VITE_APP_WEB_SERVICE}/product/${productID}`);
         } catch (error) {
             console.error('Error deleting course:', error)
         }
@@ -29,8 +28,7 @@ const Product = () => {
     const submit = async (e) => {
         e.preventDefault()
         try {
-          // await axios.post('http://localhost:5000/product', {
-          await axios.post('https://rcms-cakeshop-api.onrender.com/product', {
+          await axios.post(`${VITE_APP_WEB_SERVICE}/product`, {
             product_name: csw_products,
             type,
             description,
@@ -45,8 +43,7 @@ const Product = () => {
     useEffect(() => {
         const fetchProductsData = async () => {
           try {
-            // const response = await fetch('http://localhost:5000/product')
-            const response = await fetch('https://rcms-cakeshop-api.onrender.com/product')
+            const response = await fetch(`${VITE_APP_WEB_SERVICE}/product`)
             const data = await response.json()
             setProducts(data.product)
           } catch (error) {

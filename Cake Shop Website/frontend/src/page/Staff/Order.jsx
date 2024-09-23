@@ -16,16 +16,14 @@ const Order = () => {
     }
     const handleDeleteOrders_M = async () => {
         try {
-            // await axios.put(`http://localhost:5000/order/manager/${ordersID}`)
-            await axios.put(`https://rcms-cakeshop-api.onrender.com/order/manager/${ordersID}`)
+            await axios.put(`${VITE_APP_WEB_SERVICE}/order/manager/${ordersID}`)
         } catch (error) {
             console.error('Error deleting course:', error) 
         }
     }
     const handleDeleteOrders_E = async () => {
         try {
-            // await axios.put(`http://localhost:5000/order/employee/${ordersID}`)
-            await axios.put(`https://rcms-cakeshop-api.onrender.com/order/employee/${ordersID}`)
+            await axios.put(`${VITE_APP_WEB_SERVICE}/order/employee/${ordersID}`)
         } catch (error) {
             console.error('Error deleting course:', error) 
         }
@@ -34,8 +32,7 @@ const Order = () => {
     useEffect(() => {
         const fetchOrdersData = async () => {
           try {
-            // const response = await fetch('http://localhost:5000/order')
-            const response = await fetch('https://rcms-cakeshop-api.onrender.com/order')
+            const response = await fetch(`${VITE_APP_WEB_SERVICE}/order`)
             const data = await response.json()
             setOrders(data.orders)
           } catch (error) {
