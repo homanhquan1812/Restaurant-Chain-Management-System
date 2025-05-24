@@ -1,0 +1,36 @@
+:root {
+  /* Colors */
+  --color-primary: #FF6B6B;
+  --color-secondary: #4A4A4A;
+  --color-accent: #FFA07A;
+  --color-background: #F5F6FA;
+  --color-text: #2D3436;
+
+  /* Typography */
+  --font-primary: 'Inter', sans-serif;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+
+  /* Spacing */
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+
+  /* Border Radius */
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+
+  /* Shadows */
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  /* Z-index */
+  --z-modal: 300;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #1A1A1A;
+    --color-text: #FFFFFF;
+  }
+}

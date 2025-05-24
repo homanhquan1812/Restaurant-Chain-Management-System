@@ -1,0 +1,27 @@
+{
+  "dashboard": {
+    "title": "Trang chủ",
+    "welcome": "Chào mừng trở lại",
+    "totalSales": "Tổng doanh thu",
+    "totalOrders": "Tổng đơn hàng",
+    "totalCustomers": "Tổng khách hàng",
+    "totalStaff": "Tổng nhân viên",
+    "recentOrders": "Đơn hàng gần đây",
+    "topProducts": "Sản phẩm bán chạy",
+    "salesOverview": "Tổng quan doanh thu",
+    "sales_details": "Chi tiết doanh thu",
+    "deals_details": "Doanh thu chi nhánh",
+    "up_from_yesterday": "tăng so với hôm qua",
+    "down_from_yesterday": "giảm so với hôm qua",
+    "up_from_last_week": "tăng so với tuần trước",
+    "sales_vnd": "Doanh thu (VND)",
+    "month": "Tháng",
+    "up_from_last_month": "tăng so với tháng trước",
+    "down_from_last_month": "giảm so với tháng trước",
+    "branch_address": "Địa chỉ chi nhánh",
+    "revenue": "Doanh thu",
+    "orders": "Đơn hàng",
+    "staffs": "Nhân viên"
+
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Welcome back",
+    "totalSales": "Total Sales",
+    "totalOrders": "Total Orders",
+    "totalCustomers": "Total Customers",
+    "totalStaff": "Total Staff",
+    "recentOrders": "Recent Orders",
+    "topProducts": "Top Products",
+    "salesOverview": "Sales Overview",
+    "sales_details": "Sales Details",
+    "deals_details": "Branch Revenue",
+    "up_from_yesterday": "up from yesterday",
+    "down_from_yesterday": "down from yesterday",
+    "up_from_last_week": "up from last week",
+    "month": "Month",
+    "sales_vnd": "Sales (VND)",
+    "up_from_last_month": "up from last month",
+    "down_from_last_month": "down from last month",
+    "branch_address": "Branch Address",
+    "revenue": "Revenue",
+    "orders": "Orders",
+    "staffs": "Staff"
+  }
+}

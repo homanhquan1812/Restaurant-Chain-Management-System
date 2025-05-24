@@ -1,0 +1,175 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: white; */
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  /* display : flex;
+  place-items: center;
+  min-width  : 320px; */
+  min-height: 100vh;
+}
+
+.react-date-picker__wrapper {
+  border: none !important;
+}
+.leaflet-popup-content {
+  margin: 0 !important;
+}
+
+/* color status */
+.light-red {
+  background-color: #fff4f5;
+  color: #ff0018;
+  border-color: #fff4f5;
+}
+
+.light-yellow {
+  background-color: #fff5dc;
+  color: #e8a700;
+  border-color: #fff3d2;
+}
+
+.blue {
+  background-color: #eff7ff;
+  color: #156ec7;
+  border-color: #dfefff;
+}
+
+.light-blue {
+  background-color: #edfbff;
+  color: #00b9f0;
+  border-color: #d2f5ff;
+}
+
+.light-purple {
+  background-color: #f7f0ff;
+  color: #ab6aff;
+  border-color: #f2e8ff;
+}
+
+.light-orange {
+  background-color: #fff3e0;
+  color: #ff9800;
+  border-color: #ffe9c9;
+}
+
+.light-green {
+  background-color: #eafff3;
+  color: #009b46;
+  border-color: #ccffe3;
+}
+
+.light-gray {
+  background-color: #f0f0f0;
+  color: #0b0a0a;
+  border-color: #e7ebef;
+}
+
+.red {
+  background-color: #ffe3e6;
+  color: #ff3d4f;
+  border-color: #ffd1d6;
+}
+.checkbox-tree-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px; /* Khoảng cách giữa các cột, bạn có thể tùy chỉnh */
+}
+
+.brown-light {
+  background-color: #ffeedb;
+  color: #800020;
+  border-color: #c19a6b;
+}
+
+/*  Chrome, Safari, Edge */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: inherit !important;
+}
+
+/*  Firefox */
+input:-moz-autofill {
+  box-shadow: 0 0 0 1000px white inset !important;
+  -moz-text-fill-color: inherit !important;
+}
+
+/* Hide number input stepper for all browsers */
+.hide-number-stepper::-webkit-outer-spin-button,
+.hide-number-stepper::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.hide-number-stepper[type='number'] {
+  -moz-appearance: textfield;
+}
+
+::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1; 
+  border-radius: 8px;
+  border: 1px solid #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0; 
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 #f1f1f1;
+}
+.custom-scrollbar-table {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #c1c1c1 white;
+}
+
+.custom-scrollbar-table::-webkit-scrollbar {
+  width: 8px; 
+  height: 8px;
+}
+
+.custom-scrollbar-table::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+.custom-scrollbar-table::-webkit-scrollbar-thumb {
+  background-color: #c1c1c1;
+  border-radius: 8px;
+  border: 1px solid white;
+}
+
+.custom-scrollbar-table::-webkit-scrollbar-thumb:hover {
+  background-color: #a0a0a0;
+}

@@ -1,0 +1,22 @@
+import { ROLES } from "./roles";
+
+export const PERMISSIONS: Record<string, string[]> = {
+  "/dashboard": [
+    ROLES.UTOPIA_MANAGER,
+    ROLES.BRAND_MANAGER,
+    ROLES.BRANCH_MANAGER  
+  ],
+  "/brand": [ROLES.UTOPIA_MANAGER, ROLES.BRAND_MANAGER],
+  "/brand-manager": [ROLES.UTOPIA_MANAGER],
+  "/brand-manager/add": [ROLES.UTOPIA_MANAGER],
+  "/brand-manager/edit/:id": [ROLES.UTOPIA_MANAGER],
+  "/branch": [ROLES.BRAND_MANAGER],
+  "/blog": [ROLES.UTOPIA_MANAGER, ROLES.BRAND_MANAGER],
+  "/voucher": [ROLES.BRAND_MANAGER],
+  "/employee": [ROLES.BRAND_MANAGER, ROLES.BRANCH_MANAGER],
+  "/customer": [ROLES.BRAND_MANAGER, ROLES.BRANCH_MANAGER, ROLES.BRANCH_EMPLOYEE],
+  "/product": [ROLES.BRAND_MANAGER, ROLES.BRANCH_MANAGER],
+  "/order-list": [ROLES.BRANCH_MANAGER, ROLES.BRANCH_EMPLOYEE],
+  "/reservation": [ROLES.BRANCH_MANAGER, ROLES.BRANCH_EMPLOYEE],
+  "/feedback": [ROLES.BRANCH_MANAGER, ROLES.BRANCH_EMPLOYEE],
+};
