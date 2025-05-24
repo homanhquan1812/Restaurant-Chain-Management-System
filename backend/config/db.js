@@ -1,7 +1,6 @@
 require('dotenv').config()
 
 const { Pool } = require('pg')
-const { mysql } = require('mysql2')
 
 let pool
 
